@@ -17,13 +17,13 @@ Version 0.1.0
 A-aidea Ltd / aAidea
 
 Scientific and technical lead:
-Mark Ihrwell R. Petalcorin
+Mark I.R. Petalcorin
 
 Website:
 https://a-aidea.com
 
 Repository:
-https://github.com/mpetalcorin/biofm-workflow-evaluator
+https://github.com/mpetalcorin/Biofm-Workflow-Evaluator-
 
 ## Intended use
 
@@ -191,40 +191,14 @@ single-cell workflow interpretation
 quality-control and release-readiness logic
 scientific dashboard design
 
-## How to reproduce
-
-Run backend:
-
-```bash
-cd backend
-source .venv/bin/activate
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
-```
-
-Run frontend:
-
-```bash
-npm run dev
-```
-
-Test backend:
-
-```bash
-curl http://localhost:8000/api/health
-```
-
-Run demo from the frontend by pressing:
-
-Check backend
-Run demo
-Release check
-Export report
 
 ## Citation and acknowledgement
 
 If reused in a portfolio, website, or scientific software demonstration, acknowledge:
 
-BioFM Workflow Evaluator by aAidea, developed by Mark Ihrwell R. Petalcorin.
+BioFM Workflow Evaluator by aAidea, developed by Mark I.R. Petalcorin.
+
+**Petalcorin, M.I.R.** (2026). BioFM Workflow Evaluator: A Full-Stack Biology Software Framework for Interpretable Bio Foundation Model Outputs, Single-Cell Workflow Quality Control, and Production-Ready Translational Decision Support. https://github.com/mpetalcorin/BioFM-Workflow-Evaluator- 
 
 ## Contact
 
