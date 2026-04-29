@@ -17,13 +17,13 @@ Version 0.1.0
 aAidea
 
 Scientific and technical lead:
-Mark Ihrwell R. Petalcorin
+Mark I.R. Petalcorin
 
 Website:
 https://a-aidea.com
 
 Repository:
-https://github.com/mpetalcorin/biofm-workflow-evaluator
+https://github.com/mpetalcorin/Biofm-Workflow-Evaluator-
 
 ## Purpose of this datasheet
 
@@ -229,32 +229,6 @@ role-based access control
 explicit privacy policy
 secure deletion of uploaded data
 
-## Reproducibility
-
-A user can reproduce the demo by running the backend and frontend locally, then pressing Run demo or uploading the demo CSV file.
-
-Backend:
-
-```bash
-cd backend
-source .venv/bin/activate
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
-```
-
-Frontend:
-
-```bash
-npm run dev
-```
-
-Demo upload test:
-
-```bash
-curl -X POST \
-  -F "file=@backend/demo_data/demo_expression.csv" \
-  http://localhost:8000/api/analyse
-```
-
 ## Maintenance
 
 The dataset schema and backend reasoning logic should be updated when new model types, embedding methods, biological signatures, or file formats are added.
@@ -279,3 +253,6 @@ https://a-aidea.com
 
 GitHub:
 https://github.com/mpetalcorin
+
+## Citation
+**Petalcorin, M.I.R. (2026). BioFM Workflow Evaluator: A Full-Stack Biology Software Framework for Interpretable Bio Foundation Model Outputs, Single-Cell Workflow Quality Control, and Production-Ready Translational Decision Support. https://github.com/mpetalcorin/BioFM-Workflow-Evaluator- 
