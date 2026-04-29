@@ -8,9 +8,6 @@ The project was developed by aAidea as an example of how biology-facing software
 Frontend:
 https://biofm-workflow-evaluator.vercel.app/
 
-Backend API, after deployment:
-https://biofm-workflow-api.onrender.com/
-
 GitHub repository:
 https://github.com/mpetalcorin/Biofm-Workflow-Evaluator-
 
@@ -53,10 +50,6 @@ PyArrow
 h5py
 pytest
 
-Deployment targets:
-Vercel for frontend
-Render for backend
-GitHub for source control and CI/CD
 
 ## Project structure
 ```
@@ -91,125 +84,6 @@ biofm-workflow-evaluator/
 ├── modelcard.md
 └── datasheet.md
 ```
-## Local frontend setup
-
-From the project root:
-
-```bash
-npm install
-npm install lucide-react recharts framer-motion
-npm install -D tailwindcss @tailwindcss/vite
-npm run dev
-```
-
-The frontend usually runs at:
-
-http://localhost:5173/
-
-## Local backend setup
-
-From the backend folder:
-
-```bash
-cd backend
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
-```
-
-The backend runs at:
-
-http://localhost:8000
-
-API documentation is available at:
-
-http://localhost:8000/docs
-
-## Environment variable
-
-For local frontend-backend communication, create a `.env.local` file in the project root:
-
-```bash
-VITE_API_BASE_URL=http://localhost:8000
-```
-
-For production deployment on Vercel, set:
-
-```bash
-VITE_API_BASE_URL=https://biofm-workflow-api.onrender.com
-```
-
-or replace the value with the actual deployed backend URL.
-
-## Backend endpoints
-
-GET /api/health
-
-Returns backend health status.
-
-POST /api/analyse
-
-Accepts an uploaded `.h5ad`, `.parquet`, or `.csv` file and returns quality-control metrics, embedding information, biological reasoning output, release-readiness score, and warnings.
-
-## Example backend test
-
-Run the backend, then from the project root:
-
-```bash
-curl http://localhost:8000/api/health
-```
-
-Expected response:
-
-```json
-{"status":"ok","service":"BioFM Workflow Evaluator API"}
-```
-
-Test uploaded demo data:
-
-```bash
-curl -X POST \
-  -F "file=@backend/demo_data/demo_expression.csv" \
-  http://localhost:8000/api/analyse
-```
-
-## Testing
-
-From the backend folder:
-
-```bash
-pytest
-```
-
-The tests cover the health endpoint and the biological reasoning module.
-
-## Deployment
-
-Frontend deployment is intended for Vercel. Backend deployment is intended for Render.
-
-Render backend settings:
-
-Root Directory:
-backend
-
-Build Command:
-pip install -r requirements.txt
-
-Start Command:
-uvicorn app.main:app --host 0.0.0.0 --port $PORT
-
-Vercel frontend settings:
-
-Build Command:
-npm run build
-
-Output Directory:
-dist
-
-Production environment variable:
-VITE_API_BASE_URL=https://biofm-workflow-api.onrender.com
 
 ## Scientific interpretation
 
