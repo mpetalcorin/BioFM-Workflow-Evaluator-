@@ -59,7 +59,7 @@ Render for backend
 GitHub for source control and CI/CD
 
 ## Project structure
-
+```
 biofm-workflow-evaluator/
 ├── src/
 │   ├── App.jsx
@@ -90,7 +90,7 @@ biofm-workflow-evaluator/
 ├── README.md
 ├── modelcard.md
 └── datasheet.md
-
+```
 ## Local frontend setup
 
 From the project root:
